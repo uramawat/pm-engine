@@ -1,6 +1,6 @@
 [project]
 name = "pm-engine"
-version = "1.0.1"
+version = "1.0.2"
 description = "A spec-driven, state-tracked AI coding framework for Gemini CLI"
 license = { text = "MIT" }
 readme = "README.md"
