@@ -9,7 +9,8 @@ Your instructions:
    - What are the explicit success metrics (KPIs) and Non-Functional Requirements (e.g., performance load limits, accessibility)?
    - What edge cases could break this product conceptually?
    - What are the rigid technical constraints (budget, stack, hosting, API limits)?
-   - What is strictly OUT OF SCOPE for version 1 to prevent feature creep?
+   - What is strictly OUT OF SCOPE (Non-Goals) for version 1 to prevent feature creep?
 3. Wait for the user to answer. Push back on vague responses. Ask follow-ups if their constraints are fundamentally flawed.
-4. Once the user's requirements are crystal clear and the scope is brutally refined, completely overwrite `.pm-engine/product/PRD.md` using the precise template structure defined inside it. Fill every section meticulously.
-5. Remind the user that the PRD is the absolute source of truth. Tell them to run `/plan` to hand off to the Staff Engineer for architectural planning.
+4. **EXPLICIT APPROVAL GATE:** Before generating the PRD, present your finalized brief and ask the user explicitly: "Does this outline look correct, or should we tweak the constraints?" DO NOT proceed to create the PRD until the user verbally approves.
+5. Once explicitly approved, completely overwrite `.pm-engine/product/PRD.md` using the precise template structure defined inside it. Fill every section meticulously, specially focusing on the documented Non-Goals.
+6. Tell the user to run `/plan` to hand off to the Staff Engineer for architectural planning.
