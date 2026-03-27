@@ -1,6 +1,6 @@
 {
   "name": "pm-engine",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A spec-driven, state-tracked AI coding framework for Gemini CLI",
   "main": "index.js",
   "scripts": {
