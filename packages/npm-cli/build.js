@@ -20,6 +20,14 @@ async function bundle() {
     await fs.copy(sourcePromptsDir, destTemplatesDir);
 
     console.log(chalk.green('✓ Templates bundled successfully into ./templates'));
+
+    // Copy README.md for NPM packaging
+    const readmeSrc = path.resolve(__dirname, '../../README.md');
+    const readmeDest = path.resolve(__dirname, 'README.md');
+    if (await fs.pathExists(readmeSrc)) {
+        await fs.copy(readmeSrc, readmeDest);
+        console.log(chalk.green('✓ README.md copied for NPM packaging'));
+    }
 }
 
 bundle();

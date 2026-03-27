@@ -93,3 +93,6 @@ uv tool upgrade pm-engine
 PM Engine is built as a monorepo to support both Node and Python ecosystems efficiently.
 
 All AI system prompts live in the root `core-prompts/` directory. Both the JS (npm) and Python (uv) CLI wrappers pull from this single source of truth during their respective build processes. If you want to improve how the PM team behaves, tweak the persona templates in `core-prompts/`!
+
+## 📄 License
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.

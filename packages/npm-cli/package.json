@@ -20,8 +20,8 @@
     "ai",
     "product-management"
   ],
-  "author": "",
-  "license": "ISC",
+  "author": "Udit Ramawat",
+  "license": "MIT",
   "type": "module",
   "bin": {
     "pm-engine": "./bin/cli.js"

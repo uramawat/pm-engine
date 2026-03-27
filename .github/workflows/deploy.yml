@@ -10,6 +10,9 @@ jobs:
   publish-npm:
     name: Publish to NPM
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      id-token: write # Required for NPM provenance
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
@@ -25,7 +28,7 @@ jobs:
         # npm ci installs exact versions. npm publish will automatically run your prepack build.js script!
         run: |
           npm ci
-          npm publish
+          npm publish --provenance --access public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
