@@ -1,0 +1,29 @@
+# OS Files
+.DS_Store
+Thumbs.db
+
+# Node / JS
+node_modules/
+npm-debug.log
+yarn-error.log
+.env
+
+# Python / uv
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+env/
+.pytest_cache/
+dist/
+build/
+*.egg-info/
+
+# PM Engine Build Artifacts (Do not commit these!)
+packages/npm-cli/templates/
+packages/uv-cli/src/pm_engine/templates/
+
+# Local Testing (In case you run `pm-engine init` in the monorepo root)
+.pm-engine/
+.gemini/

@@ -1,0 +1,35 @@
+{
+  "name": "pm-engine",
+  "version": "1.0.0",
+  "description": "A spec-driven, state-tracked AI coding framework for Gemini CLI",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ./bin/cli.js",
+    "build": "node build.js",
+    "prepack": "npm run build"
+  },
+  "files": [
+    "bin",
+    "src",
+    "templates"
+  ],
+  "keywords": [
+    "cli",
+    "gemini",
+    "ai",
+    "product-management"
+  ],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bin": {
+    "pm-engine": "./bin/cli.js"
+  },
+  "dependencies": {
+    "chalk": "^5.6.2",
+    "commander": "^14.0.3",
+    "fs-extra": "^11.3.4",
+    "inquirer": "^13.3.2"
+  }
+}
