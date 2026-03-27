@@ -10,6 +10,14 @@ While the ecosystem is currently flooded with rich toolchains for Claude Code an
 
 **The Result:** A to-the-point and highly resilient virtual product team for Gemini CLI. Whether you're scaffolding a fast Astro site or building a complex production app, this framework prevents context rot, dramatically narrows the scope of AI hallucination, and locks in architectural discipline.
 
+## 📋 Prerequisites
+
+Before starting, ensure you have the following tools installed:
+
+- **npm (Node.js)**: Required for the JS-based CLI. ([Installation link](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm))
+- **uv**: Required for the Python-based CLI. ([Installation link](https://docs.astral.sh/uv/getting-started/installation/))
+- **Gemini CLI**: The engine that powers the AI personas. ([Installation link](https://geminicli.com/))
+
 ---
 
 ## 🚀 Quick Start
