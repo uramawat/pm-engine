@@ -17,6 +17,7 @@ export async function initProject() {
 
     // 1. Create the directories safely
     await fs.ensureDir(path.join(pmEngineDir, 'product'));
+    await fs.ensureDir(path.join(pmEngineDir, 'research'));
     await fs.ensureDir(path.join(pmEngineDir, 'state', 'phases'));
     await fs.ensureDir(geminiSkillsDir);
 
@@ -35,14 +36,16 @@ export async function initProject() {
 
     console.log(chalk.dim('📄 Injecting PM and State templates...'));
 
-    // 3. Inject the Passive Memory (PRD and STATE)
+    // 3. Inject the Passive Memory (PRD, RESEARCH, and STATE)
     await copyTemplate('product/PRD.md.tmpl', '.pm-engine/product/PRD.md');
+    await copyTemplate('research/USER_INSIGHTS.md.tmpl', '.pm-engine/research/USER_INSIGHTS.md');
+    await copyTemplate('research/PERSONAS.md.tmpl', '.pm-engine/research/PERSONAS.md');
     await copyTemplate('state/STATE.md.tmpl', '.pm-engine/state/STATE.md');
 
     console.log(chalk.dim('🔌 Wiring up Gemini CLI personas...'));
 
     // 4. Inject the Active Personas directly into Gemini's skill folder
-    const skills = ['discover', 'plan', 'execute', 'review', 'status'];
+    const skills = ['discover', 'plan', 'execute', 'review', 'status', 'research', 'test-flight'];
     for (const skill of skills) {
         await copyTemplate(`skills/${skill}.md.tmpl`, `.gemini/skills/${skill}.md`);
     }

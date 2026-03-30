@@ -15,6 +15,7 @@ def init_project():
 
     console.print("[dim]📁 Creating directory infrastructure...[/dim]")
     (pm_engine_dir / "product").mkdir(parents=True, exist_ok=True)
+    (pm_engine_dir / "research").mkdir(parents=True, exist_ok=True)
     (pm_engine_dir / "state" / "phases").mkdir(parents=True, exist_ok=True)
     gemini_skills_dir.mkdir(parents=True, exist_ok=True)
 
@@ -29,10 +30,13 @@ def init_project():
 
     console.print("[dim]📄 Injecting PM and State templates...[/dim]")
     copy_template("product/PRD.md.tmpl", ".pm-engine/product/PRD.md")
+    copy_template("research/USER_INSIGHTS.md.tmpl", ".pm-engine/research/USER_INSIGHTS.md")
+    copy_template("research/PERSONAS.md.tmpl", ".pm-engine/research/PERSONAS.md")
     copy_template("state/STATE.md.tmpl", ".pm-engine/state/STATE.md")
 
     console.print("[dim]🔌 Wiring up Gemini CLI personas...[/dim]")
-    for skill in ["discover", "plan", "execute", "review", "status"]:
+    skills = ["discover", "plan", "execute", "review", "status", "research", "test-flight"]
+    for skill in skills:
         copy_template(f"skills/{skill}.md.tmpl", f".gemini/skills/{skill}.md")
 
     console.print("[bold green]✓ Scaffolding complete.[/bold green]")
