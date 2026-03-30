@@ -9,6 +9,7 @@ While the ecosystem is currently flooded with rich toolchains for Claude Code an
 2. **File-based memory** (inspired by [get-shit-done](https://github.com/gsd-build/get-shit-done)): To prevent the dreaded LLM context-window degradation on long projects, architectural context and phase logic must be explicitly tracked in rigid Markdown files (`PRD.md` and `STATE.md`), serving as the single source of truth.
 
 I went ahead an added another layer I think is critical:
+
 3. **UXR Synthesis Loop:** To avoid building products on assumptions, the framework introduces a dedicated Research engine. Raw user feedback (interviews, surveys) is synthesized into a rigid "Voice of the Customer" (`USER_INSIGHTS.md`) that serves as a non-negotiable constraint for both Discovery and Review agents.
 
 **The Result:** A to-the-point and highly resilient virtual product team for Gemini CLI. Whether you're scaffolding a fast Astro site or building a complex production app, this framework prevents context rot, dramatically narrows the scope of AI hallucination, and locks in architectural discipline.
