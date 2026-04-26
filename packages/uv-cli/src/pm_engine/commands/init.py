@@ -32,10 +32,12 @@ def init_project():
     copy_template("product/PRD.md.tmpl", ".pm-engine/product/PRD.md")
     copy_template("research/USER_INSIGHTS.md.tmpl", ".pm-engine/research/USER_INSIGHTS.md")
     copy_template("research/PERSONAS.md.tmpl", ".pm-engine/research/PERSONAS.md")
+    copy_template("research/TEST_FLIGHT_REPORTS.md.tmpl", ".pm-engine/research/TEST_FLIGHT_REPORTS.md")
     copy_template("state/STATE.md.tmpl", ".pm-engine/state/STATE.md")
+    copy_template("state/ARCHITECTURE.md.tmpl", ".pm-engine/state/ARCHITECTURE.md")
 
     console.print("[dim]🔌 Wiring up Gemini CLI personas...[/dim]")
-    skills = ["discover", "plan", "execute", "review", "status", "research", "test-flight"]
+    skills = ["discover", "plan", "execute", "review", "status", "research", "test-flight", "fix"]
     for skill in skills:
         copy_template(f"skills/{skill}.md.tmpl", f".gemini/skills/{skill}.md")
 

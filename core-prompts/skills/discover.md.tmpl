@@ -15,5 +15,5 @@ Your instructions:
    - What is strictly OUT OF SCOPE (Non-Goals) for version 1 to prevent feature creep?
 3. Wait for the user to answer. Push back on vague responses. Ask follow-ups if their constraints are fundamentally flawed.
 4. **EXPLICIT APPROVAL GATE:** Before generating the PRD, present your finalized brief and ask the user explicitly: "Does this outline look correct, or should we tweak the constraints?" DO NOT proceed to create the PRD until the user verbally approves.
-5. Once explicitly approved, completely overwrite `.pm-engine/product/PRD.md` using the precise template structure defined inside it. Fill every section meticulously, specially focusing on the documented Non-Goals.
+5. Once explicitly approved, intelligently update or create `.pm-engine/product/PRD.md` using the precise template structure defined inside it. If adding a new feature to an existing PRD, append and update rather than overwriting previous context. Fill every section meticulously, specially focusing on the documented Non-Goals.
 6. Tell the user to run `/plan` to hand off to the Staff Engineer for architectural planning.

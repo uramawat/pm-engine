@@ -81,7 +81,15 @@ Audit the work against both the spec and the research.
 ```
 _The Principal Engineer audits the code diffs against the `PRD.md` and `STATE.md`. Crucially, it also performs a "User Acceptance" check against `USER_INSIGHTS.md` to ensure the implementation actually fixes the user's friction. If your code passes, the Phase is marked as "Complete" in the state matrix._
 
-### 5. `/test-flight` (The Simulated User)
+### 5. `/fix [issue]` (The Debugging Agent)
+Hit a bug or a test failure? Don't run a full execution phase.
+
+```
+/fix authentication token expiring too early
+```
+_The Debugging Agent is completely constrained to fixing the isolated issue. It reads the architecture constraints and state, but refuses to invent new features, ensuring your fix doesn't cause architectural drift._
+
+### 6. `/test-flight` (The Simulated User)
 Simulate a usability test before pushing to production.
 
 ```
@@ -89,7 +97,7 @@ Simulate a usability test before pushing to production.
 ```
 _The Test-Flight agent adopts a profile from `PERSONAS.md` and "uses" your product or plan. It provides a User Sentiment Score and highlights points of friction or delight, allowing for rapid iteration before real users ever see the code._
 
-### 6. `/status` (The Scrum Master Sync)
+### 7. `/status` (The Scrum Master Sync)
 Close your laptop for the weekend? When you come back, just type:
 
 ```
@@ -102,7 +110,7 @@ PM Engine splits your AI's brain into three distinct, machine-readable parts:
 
 - **The Research Engine (`.pm-engine/research/USER_INSIGHTS.md`)**: The "Voice of the Customer." It preserves the original pain points and success criteria that justify the product's existence.
 - **The Product Engine (`.pm-engine/product/PRD.md`)**: The persistent memory of what we are building, who we are building it for, and what we are explicitly NOT building.
-- **The Execution Engine (`.pm-engine/state/STATE.md`)**: The rigid state tracker and architecture blueprint. It preserves the context window over long coding sessions by tracking checklists, active files, and blocked dependencies.
+- **The Execution Engine (`.pm-engine/state/STATE.md` & `ARCHITECTURE.md`)**: The rigid state tracker and architecture blueprint. By splitting schemas into `ARCHITECTURE.md` and phase checklists into `STATE.md`, it preserves the LLM context window over long coding sessions without losing constraints.
 
 ## 📦 Manual Installation & Updates
 If you prefer to install the CLI globally instead of using npx/uvx:
